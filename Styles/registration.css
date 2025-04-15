@@ -1,0 +1,236 @@
+:root{
+  --gray:#808080;
+}
+
+*{
+  margin:0; padding:0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+  outline: none; border: none;
+  text-decoration: none;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin: auto; /* Adjust margin to provide some space on all sides */
+  box-shadow: 0 4px 8px rgba(8, 66, 119, 0.9);
+  max-width: 800px;
+  width: 88%;
+  margin-top: 50px;
+  border-radius: 1rem;
+}
+
+.container .content{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 25px 20px;
+}
+
+.content .topic{
+  font-size: 30px;
+  color: #000000;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  text-shadow: 0px 0px 2px rgba(8, 66, 119, 0.6);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content .topic span {
+  color: #F66B0E;
+  text-shadow: 0px 0px 2px rgba(246, 107, 14, 0.6);
+}
+
+.content form{
+width: 100%;
+display: flex;
+flex-direction: column;
+padding: 20px;
+}
+
+.input-box .toggle-password {
+  position: absolute;
+  right: 1rem;
+  top: 85%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.input-box .toggle-password:hover {
+    color: #084277;
+}
+
+.input-box label{
+  font-size: 14px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.content .input-box{
+height: 55px;
+width: 100%;
+margin-bottom: 30px;
+width: calc(100% / 2 - 20px);
+position: relative;
+}
+
+.content .input-box input{
+position: relative;
+height: 100%;
+width: 100%;
+border-radius: 0.6rem;
+font-size: 14px;
+text-transform: none;
+outline: none;
+padding: 16px;
+background: #f1f1f1;
+border: 2px solid transparent;
+transition: all 0.3s ease;
+}
+
+.content .input-box input:focus{
+  border-color: #084277;
+  background-color: #fff;
+}
+
+.content .input-box input::placeholder {
+  color: #999;
+}
+
+.content .input-box .radio-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.content .input-box .radio-buttons label {
+  display: flex;
+  align-items: center;
+}
+
+.content .input-box .radio-buttons input[type="radio"] {
+  /* Hide the default radio button appearance */
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+/* Create custom radio button design using pseudo-elements */
+border-radius: 50%;
+border: 0.1px solid transparent;
+background-color: #f1f1f1;
+margin-right: 5px;
+position: relative;
+cursor: pointer;
+width: 10px; /* Reduce the width to make the radio button smaller */
+height: 10px;
+transform: scale(0.7);
+}
+
+/* Style the radio button when checked */
+.content .input-box .radio-buttons input[type="radio"]:checked::before {
+  content: "";
+display: block;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 11px; /* Adjust the width to make the checked circle smaller */
+height: 11px; /* Adjust the height to make the checked circle smaller */
+border-radius: 50%;
+background-color: #333; /* Change this color to the desired color */
+}
+
+form .button{
+  height: 40px;
+  margin-top: -2%;
+  margin-bottom: 20px;
+}
+form .button input{
+  height: 100%;
+  width: 100%;
+  border-radius: 0.6rem;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #084277;
+}
+form .button input:hover{
+  background-color: #09538c;
+ }
+
+.content .Login {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.content .Login a{
+  font-size: 14px;
+  margin-left: 5px;
+  color: #084277;
+}
+
+.content .Login a:hover{
+  color: #066aae;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px; /* Adjust the top position for better alignment */
+  right: 15px; /* Adjust the right position for better alignment */
+  padding: 5px;
+}
+
+#closeButton {
+  background: none;
+  border: none;
+  font-size: 2.5rem; /* Increase the font size for better visibility */
+  cursor: pointer;
+  color: #084277;
+}
+
+#closeButton:hover {
+color: #066aae;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+.container {
+  width: 95%;
+  margin: 30px auto;
+}
+
+.content .input-box {
+  width: 100%;
+}
+
+.content .topic {
+  font-size: 1.75rem;
+}
+}
+
+@media screen and (max-width: 480px) {
+.content .input-box {
+  width: 100%;
+}
+
+.content .topic {
+  font-size: 24px;
+}
+}

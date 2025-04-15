@@ -1,0 +1,1008 @@
+Received date: undefinedReceived date: 2023-11-15Received date: undefinedReceived date: undefinedReceived date: 2023-11-29Received date: undefinedReceived date: 2023-11-29Received date: undefinedReceived date: 2023-11-29Received date: undefinedReceived date: 2023-11-29Received date: undefinedReceived date: 2023-11-29Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-19
+    [selectedStartTime] => 10:00 AM
+    [selectedEndTime] => 12:00 PM
+    [selectedSeats] => 3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-14
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 5
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 2:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-26
+    [selectedStartTime] => 10:00 AM
+    [selectedEndTime] => 12:00 PM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-22
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 10:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Bulacaniana Section
+    [selectedDate] => 2023-11-19
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 5
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 10:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-30
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 11:00 AM
+    [selectedEndTime] => 12:00 PM
+    [selectedSeats] => 5
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 11:00 AM
+    [selectedEndTime] => 12:00 PM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-19
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-21
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 4
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-22
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 2
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-21
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 3:00 PM
+    [selectedSeats] => 4
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 2:00 PM
+    [selectedEndTime] => 3:00 PM
+    [selectedSeats] => 2
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 2
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 2
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 2,3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 2,3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 2,3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Bulacaniana Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 2,3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Filipiniana Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 2,3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Filipiniana Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 4
+)
+Selected Section: Selected Date: 1970-01-01Selected Start Time: 08:00:00Selected End Time: 08:00:00Selected Seats: 7Selected Section: Selected Date: 1970-01-01Selected Start Time: 08:00:00Selected End Time: 08:00:00Selected Seats: 7Selected Section: Selected Date: 1970-01-01Selected Start Time: 08:00:00Selected End Time: 08:00:00Selected Seats: 7Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-28
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-22
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 5
+)
+Received reservation request: Array
+(
+    [selectedSection] => Filipiniana Section
+    [selectedDate] => 2023-11-15
+    [selectedStartTime] => 2:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 1
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 5
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 4
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-19
+    [selectedStartTime] => 12:00 PM
+    [selectedEndTime] => 1:00 PM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-19
+    [selectedStartTime] => 12:00 PM
+    [selectedEndTime] => 1:00 PM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-22
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 4
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-09
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-08
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 5
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-23
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-22
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-15
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-23
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-09
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-15
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-09
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 4
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-09
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-15
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-22
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 5
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-16
+    [selectedStartTime] => 10:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-23
+    [selectedStartTime] => 10:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-09
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-23
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-16
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-16
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 4
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-22
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-23
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Reference Section
+    [selectedDate] => 2023-11-20
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 2
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-09
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 4
+)
+Received reservation request: Array
+(
+    [selectedSection] => Bulacaniana Section
+    [selectedDate] => 2023-12-03
+    [selectedStartTime] => 2:00 PM
+    [selectedEndTime] => 3:00 PM
+    [selectedSeats] => 0
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Filipiniana Section
+    [selectedDate] => 2023-12-06
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 3
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Filipiniana Section
+    [selectedDate] => 2023-12-06
+    [selectedStartTime] => 2:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => 1
+)
+Received reservation request: Array
+(
+    [selectedSection] => Bulacaniana Section
+    [selectedDate] => 2023-12-04
+    [selectedStartTime] => 12:00 PM
+    [selectedEndTime] => 1:00 PM
+    [selectedSeats] => 4
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-12-06
+    [selectedStartTime] => 10:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => 6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => 2
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 9:00 AM
+    [selectedEndTime] => 10:00 AM
+    [selectedSeats] => 4
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => C-7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => C-T1-7
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 10:00 AM
+    [selectedEndTime] => 11:00 AM
+    [selectedSeats] => C-T1-6
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 3:00 PM
+    [selectedEndTime] => 4:00 PM
+    [selectedSeats] => C-T1-R1
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 11:00 AM
+    [selectedEndTime] => 12:00 PM
+    [selectedSeats] => C-T1-10
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 10:00 AM
+    [selectedEndTime] => 12:00 PM
+    [selectedSeats] => C-T1-L1
+)
+Received reservation request: Array
+(
+    [selectedSection] => Circulation Section
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 1:00 PM
+    [selectedEndTime] => 2:00 PM
+    [selectedSeats] => C-T1-L1
+)
+Received reservation request: Array
+(
+    [selectedSection] => Tech4ed Center
+    [selectedDate] => 2023-11-29
+    [selectedStartTime] => 8:00 AM
+    [selectedEndTime] => 9:00 AM
+    [selectedSeats] => T-T1-8
+)

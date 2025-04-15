@@ -1,0 +1,826 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #EDF6FF;
+}
+
+section {
+    padding: 0px 40px 20px 40px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #112B3C;
+    padding: 0 45px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    height: 61px;
+    text-transform: capitalize;
+    /* Set a fixed height for the header */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-container img {
+    width: 50px;
+    /* Adjust the width of the logo image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    margin-right: 8px;
+    /* Adjust the spacing between the logo and text */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: var(--gray);
+}
+
+header .navbar a {
+    font-size: 18px;
+    padding: 18px;
+    color: rgb(255, 255, 255);
+    transition: color 0.2s ease;
+}
+
+header .navbar a:hover {
+    color: #f7f0f0b0;
+}
+
+header .navbar2 a {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    transition: color 0.2s ease;
+}
+
+header .navbar2 a:hover {
+    color: #f7f0f0b0;
+}
+
+header .navbar2 span {
+    color: rgb(255, 255, 255);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    right: -260px;
+    /* Initially hide the sidebar by moving it off-screen to the right */
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: #112B3C;
+    transition: right 0.3s ease;
+    /* Adjust the transition property to 'right' */
+    z-index: 1001;
+    overflow-y: auto;
+    padding-top: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
+    transition: all 0.4s ease;
+}
+
+.logo-name {
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    font-weight: 500;
+    padding-right: 5px;
+}
+
+.sidebar img {
+    width: 60px;
+    /* Adjust the width of the logo image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    padding-left: 10px;
+}
+
+.sidebar .sidebar-content {
+    display: flex;
+    height: 95%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 16px;
+}
+
+.sidebar-content .list {
+    list-style: none;
+}
+
+.list .nav-link {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    padding: 14px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.lists .nav-link:hover,
+.bottom-content .nav-link:hover {
+    background-color: #f7f0f01c;
+}
+
+.nav-link .icon {
+    margin-right: 14px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.nav-link .link {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+    color: #f7f0f0;
+    font-weight: 500;
+}
+
+.bottom-content .list:hover .icon,
+.bottom-content .list:hover .link {
+    color: #f7f0f0;
+    font-weight: 500;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Semi-transparent black background */
+    z-index: 1000;
+    /* Below the sidebar */
+    display: none;
+    /* Initially hidden */
+}
+
+.container-wrapper {
+    padding: 90px 50px 40px 50px;
+}
+
+.container-large h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.container-large p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.container-large ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.container-large li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.container-large {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 40px 40px;
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(246, 107, 14, 0.8);
+}
+
+.title {
+    padding: 20px 0;
+    font-size: 18px;
+}
+
+.title span {
+    color: #F66B0E;
+}
+
+/* Dropdown Button */
+.container-large .dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-button {
+    width: 100%;
+    border: 1px solid #D0D3D9;
+    border-radius: 3px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    color: #b3b3b3;
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.2);
+    text-transform: none;
+    font-size: 20px;
+}
+
+.dropdown-button span {
+    text-transform: none;
+}
+
+.dropdown-button input {
+    width: 100%;
+    text-transform: none;
+    font-size: 20px;
+    color: #555;
+}
+
+.dropdown-button input::placeholder {
+    color: #b3b3b3;
+}
+
+.dropdown-content {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 6px 0;
+    color: #b3b3b3;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid #D0D3D9;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    max-height: 200px;
+    /* Set the maximum height of the dropdown */
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 16px 30px;
+    color: #555;
+    cursor: pointer;
+    text-transform: none;
+    font-size: 20px;
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef6e;
+}
+
+.dropdown-icon {
+    margin-right: 16px;
+    margin-left: 10px;
+    color: #b3b3b3;
+    font-size: 28px;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.dropdown-container {
+    position: relative;
+    display: flex;
+    padding-top: 5px;
+    max-width: 100%;
+}
+
+/* Second Dropdown Button (Select a Date) */
+.dropdown-date .dropdown-button {
+    width: 100%;
+}
+
+/* Second Dropdown Content (Select a Date) */
+.dropdown-date .dropdown-content {
+    width: 50%;
+    /* Set the content width to 100% */
+}
+
+/* Third Dropdown Button (Select a Time) */
+.dropdown-time .dropdown-button {
+    width: 50%;
+    /* Set the width to 30% of the container */
+    float: right;
+}
+
+/* Third Dropdown Content (Select a Time) */
+.dropdown-time .dropdown-content {
+    width: 50%;
+}
+
+.flatpickr-calendar {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.flatpickr-calendar.open {
+    padding: 10px 0px !important;
+}
+
+.flatpickr-day {
+    color: #333;
+}
+
+.flatpickr-day.selected {
+    background-color: #112B3C;
+    color: #000000;
+}
+
+.flatpickr-day.today {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.selectedDate {
+    background-color: #000000;
+    color: #fff;
+}
+
+.dining-tables-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    width: auto;
+}
+
+.table-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+}
+
+.dining-table {
+    max-width: 100%;
+    width: 600px;
+    height: 120px;
+    background-color: #F3F3F3;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically */
+    text-align: center;
+    /* Center the text horizontally */
+}
+
+.chairs-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.chair {
+    width: 52px;
+    height: 52px;
+    background-color: #ffffff;
+    border: 1px solid #555;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: background-color 0.3s ease;
+}
+
+.chair:hover {
+    background-color: #f1f1f1f1;
+    /* Change the background color on hover */
+}
+
+.left-chairs,
+.right-chairs {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-chairs {
+    left: -60px;
+    /* Adjust the distance from the left side of the table */
+}
+
+.right-chairs {
+    right: -60px;
+    /* Adjust the distance from the right side of the table */
+}
+
+/* Add styles for chairs */
+.chairs-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.availability-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.availability-guide {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    /* Center the text within the availability guide */
+}
+
+.availability-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.availability-indicator {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.available {
+    background-color: #ffffff;
+    /* Green color for available seats */
+    border: 1px solid #000000;
+}
+
+.taken {
+    background-color: #B3B3B3;
+    /* Red color for taken seats */
+    border: none;
+}
+
+.selected {
+    background-color: #F66B0E;
+    /* Blue color for selected seats */
+    border: none;
+}
+
+.chair.occupied {
+    background-color: #B3B3B3; /* Set the background color for occupied seats */
+    color: #fff;
+    border: none; /* Set the text color for occupied seats */
+    cursor: pointer; /* Change the cursor to indicate that the seat is not selectable */
+    /* Add any other styles to visually indicate that the seat is occupied */
+}
+
+.occupied {
+    background-color: #ff9999; /* You can change this color to your preference */
+    /* Add any other styles to indicate an occupied seat */
+}
+
+.chair.selected:hover {
+    background-color: #f66b0eea;
+    /* Keep the same background color for hover effect on selected seats */
+}
+
+.continue-button {
+    display: none;
+    background-color: #F66B0E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.continue-button:hover {
+    background-color: #FF884D;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal styles */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    text-align: left;
+    position: relative;
+}
+
+#confirm-reservation-btn {
+    background-color: #F66B0E;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    width: 70%;
+    /* Set the button width to 70% of the modal content */
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    /* Distance from the bottom of the modal */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#confirm-reservation-btn:hover {
+    background-color: #FF884D;
+}
+
+/* Style for reservation details */
+#reservation-details {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-left: 8px;
+}
+
+/* Style for section headers */
+.section-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.section-header span {
+    color: #F66B0E;
+}
+
+.detail-value {
+    margin-bottom: 10px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+/* Additional styles for different notification types */
+.notification.error {
+    background-color: #DC3545;
+    color: white;
+}
+
+.notification.success {
+    background-color: #28a745;
+    color: white;
+}
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1081px) {
+    .container-wrapper {
+        flex-direction: column;
+        /* Stack containers vertically on smaller screens */
+        align-items: center;
+        /* Center containers horizontally */
+        padding: 40px;
+        /* Adjust padding for spacing */
+    }
+
+    .container-large {
+        max-width: 1240px;
+        width: 100%;
+        /* Take up full width on smaller screens */
+        margin-right: 0;
+        /* No margin on smaller screens */
+        margin-top: 50px;
+    }
+}
+
+/* Modern Footer Styles */
+.modern-footer {
+    background-color: #112B3C;
+    color: #fff;
+    padding: 40px 40px 60px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-height: 120px;
+    /* Set a maximum height for the logos */
+    max-width: 100%;
+    /* Ensure the logos don't exceed their container's width */
+}
+
+.footer-logo2 img {
+    max-height: 100%;
+    /* Set a maximum height for the logos */
+    max-width: 100%;
+    /* Ensure the logos don't exceed their container's width */
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.footer-text {
+    margin: 20px 20px 0 20px;
+    text-align: center;
+}
+
+.footer-text h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.footer-text p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer-text p a {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-transform: lowercase;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.footer-text p:last-child {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #f7f0f0b0;
+    /* Change the color on hover */
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+    color: #f7f0f0b0;
+}
+
+/* Styles for mobile devices (up to 768px) */
+@media (max-width: 1081px) {
+    .navbar {
+        display: none;
+        /* Hide the navigation menu by default */
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        font-size: 20px;
+        color: #fff;
+        /* Icon color */
+        margin-right: -10px;
+    }
+
+    .logo {
+        text-align: center;
+        flex-grow: 1;
+        /* Allow the logo to grow and center itself */
+        font-size: 20px;
+        color: #fff;
+        /* Logo text color */
+    }
+
+    /* Show the navigation menu when the "show-navbar" class is present */
+    .show-navbar .navbar {
+        display: block !important;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+}
+
+/* Styles for larger screens */
+@media (min-width: 1082px) {
+    .navbar {
+        display: block;
+        /* Show the navigation menu by default on larger screens */
+    }
+
+    .menu-icon {
+        display: none;
+        /* Hide the menu button on larger screens */
+    }
+}

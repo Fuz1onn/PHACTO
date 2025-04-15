@@ -1,0 +1,760 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #EDF6FF;
+}
+
+section {
+    margin-left: 260px;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-container img {
+    width: 50px;
+    /* Adjust the width of the logo image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    margin-right: 8px;
+    /* Adjust the spacing between the logo and text */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    /* Position the sidebar on the left side */
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: #112B3C;
+    transition: left 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto;
+    padding-top: 20px;
+    transition: all 0.4s ease;
+}
+
+.logo-name {
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    font-weight: 500;
+    padding-right: 5px;
+}
+
+.sidebar img {
+    width: 60px;
+    /* Adjust the width of the logo image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    padding-left: 10px;
+}
+
+.sidebar .sidebar-content {
+    display: flex;
+    height: 95%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 16px;
+}
+
+.sidebar-content .list {
+    list-style: none;
+}
+
+.list .nav-link {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    padding: 14px 0px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.lists .nav-link:hover,
+.bottom-content .nav-link:hover {
+    background-color: #f7f0f01c;
+}
+
+.nav-link .icon {
+    margin-right: 14px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.nav-link .link {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+    color: #f7f0f0;
+    font-weight: 500;
+}
+
+.bottom-content .list:hover .icon,
+.bottom-content .list:hover .link {
+    color: #f7f0f0;
+    font-weight: 500;
+}
+
+#nav-link-active {
+    background-color: #f7f0f01c;
+    border-radius: 10px;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #EDF6FF;
+    padding: 0 45px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+    height: 61px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 116px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-left: 270px;
+}
+
+.search-bar input::placeholder {
+    color: #999;
+}
+
+.search-input {
+    padding: 14px 20px;
+    border: none;
+    background: none;
+    outline: none;
+    width: 1000px;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-button {
+    background-color: #f66b0e;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button i {
+    font-size: 20px;
+}
+
+.search-bar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-button:hover {
+    background-color: #f5520e;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+    color: #333;
+    margin-left: 20px;
+    /* Adjust the spacing between icons */
+    cursor: pointer;
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+/* Style for the container */
+.featured-books-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 90px 100px;
+    box-shadow: 0 4px 4px rgba(246, 107, 14, 0.8);
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 0.25rem;
+}
+
+.add-book-button {
+    background-color: #f66b0ecb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    right: 250px;
+    top: 95px;
+}
+
+.add-book-button:hover {
+    background-color: #F66B0E;
+}
+
+.search-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 116px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-button {
+    background-color: #f66b0e;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #F66B0E;
+}
+
+.featured-books-text {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    margin-right: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    z-index: 1;
+}
+
+.featured-books-text a {
+    margin-left: 10px;
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+
+.book-cover {
+    width: 250px;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    margin-left: 30px;
+}
+
+.book-cover img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.view-button {
+    background-color: #f66b0ecb;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.view-button:hover {
+    background-color: #F66B0E;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-button {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.pagination-button:hover {
+    background-color: #F66B0E;
+    color: #fff;
+    border-color: #F66B0E;
+}
+
+.pagination-button.active {
+    background-color: #F66B0E;
+    color: #fff;
+    border-color: #F66B0E;
+}
+
+.pagination-button.disabled {
+    background-color: #ffffff;
+    color: #333;
+    cursor: none;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-button.disabled:hover {
+    background-color: #f0f0f0;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.modal-content2 {
+    background-color: #fff;
+    height: 700px;
+    width: 1200px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-radius: 5px;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* Center the modal horizontally */
+    transition: all 0.4s ease;
+}
+
+.close-book-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-book-modal:hover,
+.close-book-modall:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.vertical-line2 {
+    height: 90%;
+    border-left: 3px solid #ccc;
+    margin: 30px 0;
+}
+
+.modal-left {
+    flex: 1;
+    /* Take up 50% of the modal's width */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-right {
+    flex: 1;
+    padding: 0 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+
+/* Add a line between the sections */
+.modal-right hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 2px solid #ccc;
+}
+
+/* Additional styling for modal content (adjust as needed) */
+#modalImage {
+    width: 400px;
+    /* Set the desired width for the cover */
+    height: 600px;
+    /* Set the desired height for the cover */
+    object-fit: cover;
+}
+
+#modalTitle {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+#modalAuthor {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#modalDescription {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.cancel-button {
+    background-color: #f66b0ecb;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.view-book-button,
+.delete-book-button {
+    background-color: #f66b0ecb;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.view-book-button:hover {
+    background-color: #F66B0E;
+}
+
+.view-book-button:hover,
+.cancel-button:hover,
+.delete-book-button:hover {
+    background-color: #F66B0E;
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content3 {
+    background-color: #fff;
+    margin: 4% auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    max-height: 800px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.modal-right {
+    flex: 1;
+    padding: 0 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 0 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.modal-content3 input[type="text"],
+.modal-content3 input[type="file"],
+.modal-content3 textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #D9D9D9;
+    color: #000000;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+.modal-content2 label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.preview-container {
+    width: 90%;
+    height: 100%;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    /* Hide overflowing parts of the image */
+    color: #999;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-text {
+    color: #999;
+    font-size: 16px;
+    text-align: center;
+}
+
+.hidden-input {
+    display: none;
+}
+
+.vertical-line {
+    border-left: 3px solid #ccc;
+    height: 87%;
+    position: absolute;
+    left: 49%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.button-style {
+    background-color: #f66b0ecb;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button-style.cancelBtn {
+    background-color: #f66b0ecb;
+}
+
+.button-style:hover,
+.button-style.cancelBtn:hover {
+    background-color: #F66B0E;
+}
+
+.hidden-input {
+    display: none;
+}
+
+.message {
+    position: absolute;
+    margin-top: 10px;
+    font-size: 50px;
+    text-align: center;
+    color: red;
+}
+
+table {
+    width: 100%; /* Adjust the width as needed */
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    padding: 10px; /* Adjust the padding of table cells */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px; /* Adjust the font size of table cells */
+    text-transform: none;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+#actions{
+    text-align: center;
+  }
+
+/* Optional: Add a subtle box-shadow to the table */
+table {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.view {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #112B3C; /* Updated color for all buttons */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button.view:hover {
+    background-color: #0e1f2ac2; /* Darker color on hover for all buttons */
+}
+
+.pagination2 {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%; /* Adjust the width as needed */
+}
+
+.pagination2 a {
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #112B3C;
+    margin: 0 4px;
+    border-radius: 4px;
+}
+
+.pagination2 a.active {
+    background-color: #112B3C;
+    color: #fff;
+}

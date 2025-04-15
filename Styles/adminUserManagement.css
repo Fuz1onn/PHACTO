@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #EDF6FF;
+}
+
+section {
+    margin-left: 260px;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-container img {
+    width: 50px;
+    /* Adjust the width of the logo image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    margin-right: 8px;
+    /* Adjust the spacing between the logo and text */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    /* Position the sidebar on the left side */
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: #112B3C;
+    transition: left 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto;
+    padding-top: 20px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+.logo-name {
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    font-weight: 500;
+    padding-right: 5px;
+}
+
+.sidebar img {
+    width: 60px;
+    /* Adjust the width of the logo image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    padding-left: 10px;
+}
+
+.sidebar .sidebar-content {
+    display: flex;
+    height: 95%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 16px;
+}
+
+.sidebar-content .list {
+    list-style: none;
+}
+
+.list .nav-link {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    padding: 14px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.lists .nav-link:hover,
+.bottom-content .nav-link:hover {
+    background-color: #f7f0f01c;
+}
+
+.nav-link .icon {
+    margin-left: 0;
+    margin-right: 14px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.nav-link .link {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+    color: #f7f0f0;
+    font-weight: 500;
+}
+
+.bottom-content .list:hover .icon,
+.bottom-content .list:hover .link {
+    color: #f7f0f0;
+    font-weight: 500;
+}
+
+#nav-link-active {
+    background-color: #f7f0f01c;
+    border-radius: 10px;
+}
+
+.icon {
+    font-size: 24px;
+    color: #333;
+    margin-left: 20px;
+    /* Adjust the spacing between icons */
+    cursor: pointer;
+}
+
+.container2 {
+    width: 100%;
+    background-color: #fff;
+    padding: 50px 45px;
+    box-shadow: 0 4px 4px rgba(246, 107, 14, 0.8);
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 0.25rem;
+}
+
+.container2 h1 {
+    font-size: 24px;
+    color: #333;
+    display: inline-block;
+    /* Make the h1 display as an inline block */
+    margin-right: 20px;
+    /* Adjust the spacing between h1 and the "Add" button */
+}
+
+.button.add {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #112B3C;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Add" button */
+.button.add:hover {
+    background-color: #0e1f2ac2;
+}
+
+table {
+    width: 100%;
+    /* Adjust the width as needed */
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th,
+td {
+    padding: 10px;
+    /* Adjust the padding of table cells */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    /* Adjust the font size of table cells */
+    text-transform: none;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+#actions {
+    text-align: center;
+}
+
+/* Optional: Add a subtle box-shadow to the table */
+table {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table a.button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #112B3C;
+    /* Updated color for all buttons */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+table a.button.delete {
+    background-color: #112B3C;
+    /* Updated color for "Delete" */
+}
+
+table a.button.view {
+    background-color: #112B3C;
+    /* Updated color for "View" */
+}
+
+/* Hover effect */
+table a.button:hover,
+table a.button.delete:hover,
+table a.button.view:hover {
+    background-color: #0e1f2ac2;
+    /* Darker color on hover for all buttons */
+}
+
+.button.view {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #112B3C;
+    /* Updated color for all buttons */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Add" button */
+.button.view:hover {
+    background-color: #0e1f2ac2;
+}
+
+.button.edit {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #112B3C;
+    /* Updated color for all buttons */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Add" button */
+.button.edit:hover {
+    background-color: #0e1f2ac2;
+}
+
+.button.archive,
+.button.restore {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #112B3C;
+    /* Updated color for all buttons */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Add" button */
+.button.archive:hover,
+.button.restore:hover {
+    background-color: #0e1f2ac2;
+}
+
+.add-book-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #112B3C;
+    /* Updated color for all buttons */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.add-book-button:hover {
+    background-color: #0e1f2ac2;
+}
+
+.pagination2 {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    /* Adjust the width as needed */
+}
+
+.pagination2 a {
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #112B3C;
+    margin: 0 4px;
+    border-radius: 4px;
+}
+
+.pagination2 a.active {
+    background-color: #112B3C;
+    color: #fff;
+}
+
+h6 {
+    font-size: 1.5rem;
+    color: #333;
+    /* Bootstrap's secondary text color */
+    border-bottom: 1px solid #999999b6;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-save-changes {
+    width: 100%;
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content3 {
+    background-color: #fff;
+    margin: 4% auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    max-height: 800px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.modal-right {
+    flex: 1;
+    padding: 0 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 0 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.modal-content3 input[type="text"],
+.modal-content3 input[type="file"],
+.modal-content3 textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #D9D9D9;
+    color: #000000;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+.modal-content2 label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.preview-container {
+    width: 90%;
+    height: 100%;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    /* Hide overflowing parts of the image */
+    color: #999;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-text {
+    color: #999;
+    font-size: 16px;
+    text-align: center;
+}
+
+.hidden-input {
+    display: none;
+}
+
+.vertical-line {
+    border-left: 3px solid #ccc;
+    height: 87%;
+    position: absolute;
+    left: 49%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.button-style {
+    background-color: #f66b0ecb;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button-style.cancelBtn {
+    background-color: #f66b0ecb;
+}
+
+.button-style:hover,
+.button-style.cancelBtn:hover {
+    background-color: #F66B0E;
+}
+
+.hidden-input {
+    display: none;
+}
+
+.button.save {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #112B3C;
+    /* Updated color for all buttons */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Add" button */
+.button.save:hover {
+    background-color: #0e1f2ac2;
+}
