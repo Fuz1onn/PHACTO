@@ -2,12 +2,14 @@
 session_start();
 include '../conn/connection.php';
 
-function openDatabaseConnection() {
+function openDatabaseConnection()
+{
   $conn = OpenCon();
   return $conn;
 }
 
-function loginUser($conn, $username, $password) {
+function loginUser($conn, $username, $password)
+{
   // Query for user profile
   $sql_user = mysqli_query($conn, "SELECT * FROM `user profile` WHERE username='$username'");
   $row_user = mysqli_fetch_array($sql_user);
@@ -16,12 +18,12 @@ function loginUser($conn, $username, $password) {
   $sql_librarian = mysqli_query($conn, "SELECT * FROM `librarian profile` WHERE l_username ='$username'");
   $row_librarian = mysqli_fetch_array($sql_librarian);
 
-  if(is_array($row_user) && password_verify($password, $row_user['password'])) {
+  if (is_array($row_user) && password_verify($password, $row_user['password'])) {
     $_SESSION["username"] = $row_user['username'];
     $_SESSION['user_id'] = $row_user['user_id'];
     header("Location: ../User/userHomePage.php");
     exit();
-  } else if(is_array($row_librarian) && password_verify($password, $row_librarian['l_password'])) {
+  } else if (is_array($row_librarian) && password_verify($password, $row_librarian['l_password'])) {
     $_SESSION["username"] = $row_librarian['l_username'];
     $_SESSION['librarian_id'] = $row_librarian['librarian_id'];
     header("Location: ../Admin/adminDashboard.php");
@@ -31,14 +33,15 @@ function loginUser($conn, $username, $password) {
   }
 }
 
-function registerUser($conn, $firstname, $lastname, $address, $cnumber, $username, $email, $password, $cpassword, $gender) {
+function registerUser($conn, $firstname, $lastname, $address, $cnumber, $username, $email, $password, $cpassword, $gender)
+{
   // Check for existing username or email
   $checkQuery = "SELECT * FROM `user profile` WHERE username = '$username' OR email = '$email'";
   $result = $conn->query($checkQuery);
 
-  if($result->num_rows > 0) {
+  if ($result->num_rows > 0) {
     return "Username or email already exists. Please choose another.";
-  } elseif($password !== $cpassword) {
+  } elseif ($password !== $cpassword) {
     return "Passwords do not match.";
   } else {
     // Passwords match, proceed with registration
@@ -64,20 +67,21 @@ function registerUser($conn, $firstname, $lastname, $address, $cnumber, $usernam
     $newNumericPart = max($startNumber, $maxID + 1);
 
     // Calculate the new custom ID
-    $newCustomID = $currentYear."-".sprintf("%03d", $newNumericPart);
+    $newCustomID = $currentYear . "-" . sprintf("%03d", $newNumericPart);
 
     // Insert user details into the database
     $insertQuery = "INSERT INTO `user profile` (custom_id, firstname, lastname, address, cnumber, username, email, password, gender)
                     VALUES('$newCustomID', '$firstname', '$lastname', '$address', '$cnumber', '$username', '$email', '$hashedPassword', '$gender')";
 
-    if($conn->query($insertQuery) === TRUE) {
+    if ($conn->query($insertQuery) === TRUE) {
       return true; // Registration success
     } else {
-      return "Error: ".$conn->error;
+      return "Error: " . $conn->error;
     }
   }
 }
-function getPaginatedBooks($conn, $limit = 6) {
+function getPaginatedBooks($conn, $limit = 6)
+{
   try {
     $query = "SELECT book_id, book_image, book_file, book_title, book_author, book_description FROM books LIMIT ?";
     $stmt = $conn->prepare($query);
@@ -86,27 +90,28 @@ function getPaginatedBooks($conn, $limit = 6) {
     $result = $stmt->get_result();
     $books = [];
 
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
       $books[] = $row;
     }
 
     return $books;
   } catch (Exception $e) {
-    error_log("Database Query Error: ".$e->getMessage(), 3, "../Admin/logs/error.log");
+    error_log("Database Query Error: " . $e->getMessage(), 3, "../Admin/logs/error.log");
     exit("An error occurred while fetching book details. Please try again later.");
   }
 }
 
-function getWebsiteSettings($conn) {
+function getWebsiteSettings($conn)
+{
   $sql = "SELECT * FROM website_settings WHERE setting_id = 1";
   $result = $conn->query($sql);
 
-  if(!$result) {
+  if (!$result) {
     // Handle the error, log it, or display an error message
-    die("Error fetching website settings: ".$conn->error);
+    die("Error fetching website settings: " . $conn->error);
   }
 
-  if($result->num_rows > 0) {
+  if ($result->num_rows > 0) {
     return $result->fetch_assoc();
   }
 
@@ -116,7 +121,7 @@ function getWebsiteSettings($conn) {
 $currentWebsiteSettings = getWebsiteSettings($conn);
 
 // If data is fetched successfully, use it; otherwise, provide default values
-if($currentWebsiteSettings) {
+if ($currentWebsiteSettings) {
   $websiteName = $currentWebsiteSettings['website_name'];
   $websiteLogo = $currentWebsiteSettings['website_logo'];
 } else {
@@ -128,18 +133,18 @@ if($currentWebsiteSettings) {
 $conn = OpenCon();
 $bookCovers = getPaginatedBooks($conn, 6);
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
   extract($_POST);
   $conn = openDatabaseConnection();
 
-  if(isset($_POST['login'])) {
+  if (isset($_POST['login'])) {
     $loginMessage = loginUser($conn, $username, $password);
-    if($loginMessage) {
+    if ($loginMessage) {
       $message[] = $loginMessage;
     }
-  } elseif(isset($_POST['register'])) {
+  } elseif (isset($_POST['register'])) {
     $registrationMessage = registerUser($conn, $firstname, $lastname, $address, $cnumber, $username, $email, $password, $cpassword, $gender);
-    if($registrationMessage === true) {
+    if ($registrationMessage === true) {
       $registrationSuccess = true;
       $openLoginModal = true; // Set a flag to indicate successful registration
     } else {
@@ -269,7 +274,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
           <a href="../Visitor/visitorBookViewing.php" class="search-button">More</a>
         </div>
         <div class="book-container" id="book-container">
-          <?php foreach($bookCovers as $cover): ?>
+          <?php foreach ($bookCovers as $cover): ?>
             <div class="book-cover" data-book-id="<?= $cover['book_id']; ?>"
               data-title="<?= htmlspecialchars($cover['book_title']); ?>"
               data-author="<?= htmlspecialchars($cover['book_author']); ?>"
@@ -415,11 +420,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="user-details">
         <h2>LOGIN</h2>
         <?php
-          if(isset($message)) {
-            foreach($message as $message) {
-              echo '<div class="message">'.$message.'</div>';
-            }
+        if (isset($message)) {
+          foreach ($message as $message) {
+            echo '<div class="message">' . $message . '</div>';
           }
+        }
         ?>
         <form action="" method="POST" enctype="multipart/form-data">
           <div class="input-box">
@@ -471,9 +476,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="" method="POST" enctype="multipart/form-data">
           <div class="topic">Create an <span>Account</span></div>
           <?php
-          if(isset($message)) {
-            foreach($message as $message) {
-              echo '<div class="message">'.$message.'</div>';
+          if (isset($message)) {
+            foreach ($message as $message) {
+              echo '<div class="message">' . $message . '</div>';
             }
           }
           ?>
@@ -666,7 +671,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   </script>
 
   <script>
-    <?php if(isset($registrationSuccess) && $registrationSuccess === true) { ?>
+    <?php if (isset($registrationSuccess) && $registrationSuccess === true) { ?>
       document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('loginModal').style.display = 'block';
       });
