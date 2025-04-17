@@ -1,168 +1,10 @@
-<?php
-session_start();
-include '../conn/connection.php';
-
-function openDatabaseConnection()
-{
-  $conn = OpenCon();
-  return $conn;
-}
-
-function loginUser($conn, $username, $password)
-{
-  // Query for user profile
-  $sql_user = mysqli_query($conn, "SELECT * FROM `user profile` WHERE username='$username'");
-  $row_user = mysqli_fetch_array($sql_user);
-
-  // Query for librarian profile
-  $sql_librarian = mysqli_query($conn, "SELECT * FROM `librarian profile` WHERE l_username ='$username'");
-  $row_librarian = mysqli_fetch_array($sql_librarian);
-
-  if (is_array($row_user) && password_verify($password, $row_user['password'])) {
-    $_SESSION["username"] = $row_user['username'];
-    $_SESSION['user_id'] = $row_user['user_id'];
-    header("Location: ../User/userHomePage.php");
-    exit();
-  } else if (is_array($row_librarian) && password_verify($password, $row_librarian['l_password'])) {
-    $_SESSION["username"] = $row_librarian['l_username'];
-    $_SESSION['librarian_id'] = $row_librarian['librarian_id'];
-    header("Location: ../Admin/adminDashboard.php");
-    exit();
-  } else {
-    return 'Incorrect Username or Password!';
-  }
-}
-
-function registerUser($conn, $firstname, $lastname, $address, $cnumber, $username, $email, $password, $cpassword, $gender)
-{
-  // Check for existing username or email
-  $checkQuery = "SELECT * FROM `user profile` WHERE username = '$username' OR email = '$email'";
-  $result = $conn->query($checkQuery);
-
-  if ($result->num_rows > 0) {
-    return "Username or email already exists. Please choose another.";
-  } elseif ($password !== $cpassword) {
-    return "Passwords do not match.";
-  } else {
-    // Passwords match, proceed with registration
-
-    // Hash the password before storing it in the database
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-    // Generate a unique custom ID
-    $startNumber = 700;
-    $currentYear = date("Y");
-
-    // Fetch the maximum user ID in the current year
-    $sqlMaxID = "SELECT MAX(SUBSTRING_INDEX(custom_id, '-', -1)) as maxID FROM `user profile` WHERE YEAR(NOW()) = ?";
-    $stmtMaxID = $conn->prepare($sqlMaxID);
-    $stmtMaxID->bind_param('s', $currentYear);
-    $stmtMaxID->execute();
-    $resultMaxID = $stmtMaxID->get_result();
-    $rowMaxID = $resultMaxID->fetch_assoc();
-    $maxID = $rowMaxID['maxID'];
-    $stmtMaxID->close();
-
-    // Calculate the new numeric part of the custom ID
-    $newNumericPart = max($startNumber, $maxID + 1);
-
-    // Calculate the new custom ID
-    $newCustomID = $currentYear . "-" . sprintf("%03d", $newNumericPart);
-
-    // Insert user details into the database
-    $insertQuery = "INSERT INTO `user profile` (custom_id, firstname, lastname, address, cnumber, username, email, password, gender)
-                    VALUES('$newCustomID', '$firstname', '$lastname', '$address', '$cnumber', '$username', '$email', '$hashedPassword', '$gender')";
-
-    if ($conn->query($insertQuery) === TRUE) {
-      return true; // Registration success
-    } else {
-      return "Error: " . $conn->error;
-    }
-  }
-}
-function getPaginatedBooks($conn, $limit = 6)
-{
-  try {
-    $query = "SELECT book_id, book_image, book_file, book_title, book_author, book_description FROM books LIMIT ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("i", $limit);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $books = [];
-
-    while ($row = $result->fetch_assoc()) {
-      $books[] = $row;
-    }
-
-    return $books;
-  } catch (Exception $e) {
-    error_log("Database Query Error: " . $e->getMessage(), 3, "../Admin/logs/error.log");
-    exit("An error occurred while fetching book details. Please try again later.");
-  }
-}
-
-function getWebsiteSettings($conn)
-{
-  $sql = "SELECT * FROM website_settings WHERE setting_id = 1";
-  $result = $conn->query($sql);
-
-  if (!$result) {
-    // Handle the error, log it, or display an error message
-    die("Error fetching website settings: " . $conn->error);
-  }
-
-  if ($result->num_rows > 0) {
-    return $result->fetch_assoc();
-  }
-
-  return null;
-}
-
-$currentWebsiteSettings = getWebsiteSettings($conn);
-
-// If data is fetched successfully, use it; otherwise, provide default values
-if ($currentWebsiteSettings) {
-  $websiteName = $currentWebsiteSettings['website_name'];
-  $websiteLogo = $currentWebsiteSettings['website_logo'];
-} else {
-  // Default values (adjust as needed)
-  $websiteName = "Default Website Name";
-  $websiteLogo = "default_logo.png";
-}
-
-$conn = OpenCon();
-$bookCovers = getPaginatedBooks($conn, 6);
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  extract($_POST);
-  $conn = openDatabaseConnection();
-
-  if (isset($_POST['login'])) {
-    $loginMessage = loginUser($conn, $username, $password);
-    if ($loginMessage) {
-      $message[] = $loginMessage;
-    }
-  } elseif (isset($_POST['register'])) {
-    $registrationMessage = registerUser($conn, $firstname, $lastname, $address, $cnumber, $username, $email, $password, $cpassword, $gender);
-    if ($registrationMessage === true) {
-      $registrationSuccess = true;
-      $openLoginModal = true; // Set a flag to indicate successful registration
-    } else {
-      $message[] = $registrationMessage;
-    }
-  }
-
-  mysqli_close($conn);
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../Styles/vlanding.css">
+  <link rel="stylesheet" href="/Styles/vlanding.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
   <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/index.global.min.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.8/index.global.min.js'></script>
@@ -365,7 +207,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
       <div class="footer-text">
         <h2>
-          <?php echo $currentWebsiteSettings['website_name']; ?>
         </h2>
         <p>&copy; 2023 All rights reserved</p>
         <p>Email: <a href="bulacanprovlib2020@gmail.com">bulacanprovlib2020@gmail.com</a></p>
@@ -419,13 +260,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
       <div class="user-details">
         <h2>LOGIN</h2>
-        <?php
-        if (isset($message)) {
-          foreach ($message as $message) {
-            echo '<div class="message">' . $message . '</div>';
-          }
-        }
-        ?>
         <form action="" method="POST" enctype="multipart/form-data">
           <div class="input-box">
             <input type="text" placeholder="Enter Your Username" id="username" name="username" required>
